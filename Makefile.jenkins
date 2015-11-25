@@ -105,7 +105,7 @@ langdoc:
 	  cd  $(BUILDDIR)/langdoc && git clone https://github.com/Kurento/kurento-java.git && cd kurento-java && git checkout kurento-java-$(CLIENT_JAVA_VERSION) || git checkout $(CLIENT_JAVA_VERSION) || echo "Using master branch"
 	  mv $(BUILDDIR)/langdoc/kurento-java/kurento-repository/kurento-repository-internal $(BUILDDIR)/langdoc/kurento-repository-internal
 	  rsync -av --exclude 'target' $(BUILDDIR)/langdoc/kurento-repository-internal/* $(BUILDDIR)/langdoc/kurento-repository-internal
-	  cd $(BUILDDIR)/langdoc/kurento-repository-internal && mvn --settings /tmp/config1778159492949097092tmp clean package -DskipTests
+	  cd $(BUILDDIR)/langdoc/kurento-repository-internal && mvn --settings /tmp/config254199016106600428tmp clean package -DskipTests
 	  
 	  javadoc $(DOCLINT) -windowtitle "Kurento Repository Internal Javadoc" \
 	    -d $(BUILDDIR)/html/langdoc/javadoc/internal \
@@ -116,7 +116,7 @@ langdoc:
 	  rm -rf $(BUILDDIR)/langdoc/kurento-repository-server
 	  mv $(BUILDDIR)/langdoc/kurento-java/kurento-repository/kurento-repository-server $(BUILDDIR)/langdoc/kurento-repository-server
 	  rsync -av --exclude 'target' $(BUILDDIR)/langdoc/kurento-repository-server/* $(BUILDDIR)/langdoc/kurento-repository-server
-	  cd $(BUILDDIR)/langdoc/kurento-repository-server && mvn --settings /tmp/config1778159492949097092tmp clean package -DskipTests
+	  cd $(BUILDDIR)/langdoc/kurento-repository-server && mvn --settings /tmp/config254199016106600428tmp clean package -DskipTests
 	  
 	  javadoc $(DOCLINT) -windowtitle "Kurento Repository Server Javadoc" \
 	    -d $(BUILDDIR)/html/langdoc/javadoc/server \
@@ -127,7 +127,7 @@ langdoc:
 	  # kurento-repository-client javadoc
 	  #rm -rf $(BUILDDIR)/langdoc/kurento-repository-client
 	  #rsync -av --exclude 'target' ../../../../kurento-repository-client/* $(BUILDDIR)/langdoc/kurento-repository-client
-	  #cd $(BUILDDIR)/langdoc/kurento-repository-client && mvn --settings /tmp/config1778159492949097092tmp clean package -DskipTests
+	  #cd $(BUILDDIR)/langdoc/kurento-repository-client && mvn --settings /tmp/config254199016106600428tmp clean package -DskipTests
 	  
 	  #javadoc $(DOCLINT) -windowtitle "Kurento Repository Client Javadoc" \
 	  #  -d $(BUILDDIR)/html/langdoc/javadoc/client \
