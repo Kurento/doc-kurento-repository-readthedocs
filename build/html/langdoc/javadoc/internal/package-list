@@ -1,0 +1,6 @@
+org.kurento.repository
+org.kurento.repository.internal
+org.kurento.repository.internal.http
+org.kurento.repository.internal.repoimpl
+org.kurento.repository.internal.repoimpl.filesystem
+org.kurento.repository.internal.repoimpl.mongo
