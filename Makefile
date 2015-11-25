@@ -107,7 +107,7 @@ langdoc:
 	  rsync -av --exclude 'target' $(BUILDDIR)/langdoc/kurento-repository-internal/* $(BUILDDIR)/langdoc/kurento-repository-internal
 	  cd $(BUILDDIR)/langdoc/kurento-repository-internal && mvn clean package -DskipTests
 	  
-	  javadoc -Xdoclint:none -windowtitle "Kurento Repository Internal Javadoc" \
+	  javadoc $(DOCLINT) -windowtitle "Kurento Repository Internal Javadoc" \
 	    -d $(BUILDDIR)/html/langdoc/javadoc/internal \
 	    -sourcepath $(BUILDDIR)/langdoc/kurento-repository-internal/src/main/java/ \
 	    -subpackages org.kurento.repository
@@ -118,7 +118,7 @@ langdoc:
 	  rsync -av --exclude 'target' $(BUILDDIR)/langdoc/kurento-repository-server/* $(BUILDDIR)/langdoc/kurento-repository-server
 	  cd $(BUILDDIR)/langdoc/kurento-repository-server && mvn clean package -DskipTests
 	  
-	  javadoc -Xdoclint:none -windowtitle "Kurento Repository Server Javadoc" \
+	  javadoc $(DOCLINT) -windowtitle "Kurento Repository Server Javadoc" \
 	    -d $(BUILDDIR)/html/langdoc/javadoc/server \
 	    -sourcepath $(BUILDDIR)/langdoc/kurento-repository-server/src/main/java/ \
 	    -subpackages org.kurento.repository
@@ -129,7 +129,7 @@ langdoc:
 	  #rsync -av --exclude 'target' ../../../../kurento-repository-client/* $(BUILDDIR)/langdoc/kurento-repository-client
 	  #cd $(BUILDDIR)/langdoc/kurento-repository-client && mvn clean package -DskipTests
 	  
-	  #javadoc -Xdoclint:none -windowtitle "Kurento Repository Client Javadoc" \
+	  #javadoc $(DOCLINT) -windowtitle "Kurento Repository Client Javadoc" \
 	  #  -d $(BUILDDIR)/html/langdoc/javadoc/client \
 	  #  -sourcepath $(BUILDDIR)/langdoc/kurento-repository-client/src/main/java/ \
 	  #  -subpackages org.kurento.repository
