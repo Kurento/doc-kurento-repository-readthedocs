@@ -7,4 +7,4 @@
    |                                    |
    '------------------------------------'
        Kurento Repository Server
-       Version 6.1.1-SNAPSHOT
+       Version 6.2.1-SNAPSHOT
