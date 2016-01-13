@@ -17,15 +17,22 @@ its factory ``org.kurento.repository.RepositoryClientProvider`` is quite
 detailed so it shouldn't be very difficult to set up a client connected to a 
 running Kurento Repository Server (don't forget to check our tutorials, and 
 especially the 
-`kurento-hello-world-repository <https://github.com/Kurento/kurento-tutorial-java/tree/master/kurento-hello-world-recording>`_
-one).
+`kurento-hello-world-repository <https://github.com/Kurento/kurento-tutorial-java/tree/master/kurento-hello-world-recording>`_).
 
 Usage
 -----
 
 This library can be imported as a Maven dependency and then instances of 
 ``org.kurento.repository.RepositoryClient`` can be created in order to interact 
-with the repository server.
+with the repository server. The Maven artifact to be included in you pom.xml is
+
+.. code-block:: xml
+
+   <dependency>
+       <groupId>org.kurento</groupId>
+       <artifactId>kurento-repository-client</artifactId>
+       <version>6.1.1-SNAPSHOT</version>
+   </dependency>
 
 We provide a Kurento Java tutorial, 
 `kurento-hello-world-repository <https://github.com/Kurento/kurento-tutorial-java/tree/master/kurento-hello-world-recording>`_
