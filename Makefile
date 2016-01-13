@@ -24,8 +24,6 @@ ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) sou
 # the i18n builder cannot share the environment and doctrees with the others
 I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) source
 
-DOCLINT = $(shell ./doclint.sh)
-
 .PHONY: help clean html dirhtml singlehtml pickle json htmlhelp langdoc qthelp devhelp epub latex latexpdf text man changes linkcheck doctest gettext dist
 
 help:
@@ -123,16 +121,16 @@ langdoc:
 	    -sourcepath $(BUILDDIR)/langdoc/kurento-repository-server/src/main/java/ \
 	    -subpackages org.kurento.repository
 	   
-	  # TODO  
 	  # kurento-repository-client javadoc
-	  #rm -rf $(BUILDDIR)/langdoc/kurento-repository-client
-	  #rsync -av --exclude 'target' ../../../../kurento-repository-client/* $(BUILDDIR)/langdoc/kurento-repository-client
-	  #cd $(BUILDDIR)/langdoc/kurento-repository-client && mvn clean package -DskipTests
+	  rm -rf $(BUILDDIR)/langdoc/kurento-repository-client
+	  mv $(BUILDDIR)/langdoc/kurento-java/kurento-repository/kurento-repository-client $(BUILDDIR)/langdoc/kurento-repository-client
+	  rsync -av --exclude 'target' $(BUILDDIR)/langdoc/kurento-repository-client/* $(BUILDDIR)/langdoc/kurento-repository-client
+	  cd $(BUILDDIR)/langdoc/kurento-repository-client && mvn clean package -DskipTests
 	  
-	  #javadoc $(DOCLINT) -windowtitle "Kurento Repository Client Javadoc" \
-	  #  -d $(BUILDDIR)/html/langdoc/javadoc/client \
-	  #  -sourcepath $(BUILDDIR)/langdoc/kurento-repository-client/src/main/java/ \
-	  #  -subpackages org.kurento.repository
+	  javadoc $(DOCLINT) -windowtitle "Kurento Repository Client Javadoc" \
+	    -d $(BUILDDIR)/html/langdoc/javadoc/client \
+	    -sourcepath $(BUILDDIR)/langdoc/kurento-repository-client/src/main/java/ \
+	    -subpackages org.kurento.repository
 
 qthelp:
 	$(SPHINXBUILD) -b qthelp $(ALLSPHINXOPTS) $(BUILDDIR)/qthelp
