@@ -5,7 +5,7 @@
 # IMPORTANT: Notice that DOC_VERSION should be the same as variable "release" in conf.py,
 # so when this variable is updated, it should be also updated in conf.py
 
-DOC_VERSION = 6.1.1-SNAPSHOT
+DOC_VERSION = 6.1.1-dev
 KMS_VERSION = 6.1.2
 CLIENT_JAVA_VERSION = 6.1.1-SNAPSHOT
 CLIENT_JS_VERSION = 6.1.0
@@ -93,7 +93,7 @@ htmlhelp:
 
 langdoc:
 	  @echo "Doclint arg for javadoc (if java version >= 1.8): $(DOCLINT)"
-	  
+
 	  mkdir -p $(BUILDDIR)/langdoc
 	  rm -rf $(BUILDDIR)/html/langdoc/javadoc
 	  mkdir -p $(BUILDDIR)/html/langdoc/javadoc
@@ -104,29 +104,29 @@ langdoc:
 	  mv $(BUILDDIR)/langdoc/kurento-java/kurento-repository/kurento-repository-internal $(BUILDDIR)/langdoc/kurento-repository-internal
 	  rsync -av --exclude 'target' $(BUILDDIR)/langdoc/kurento-repository-internal/* $(BUILDDIR)/langdoc/kurento-repository-internal
 	  cd $(BUILDDIR)/langdoc/kurento-repository-internal && mvn clean package -DskipTests
-	  
+
 	  javadoc $(DOCLINT) -windowtitle "Kurento Repository Internal Javadoc" \
 	    -d $(BUILDDIR)/html/langdoc/javadoc/internal \
 	    -sourcepath $(BUILDDIR)/langdoc/kurento-repository-internal/src/main/java/ \
 	    -subpackages org.kurento.repository
-	  
+
 	  # kurento-repository-server javadoc
 	  rm -rf $(BUILDDIR)/langdoc/kurento-repository-server
 	  mv $(BUILDDIR)/langdoc/kurento-java/kurento-repository/kurento-repository-server $(BUILDDIR)/langdoc/kurento-repository-server
 	  rsync -av --exclude 'target' $(BUILDDIR)/langdoc/kurento-repository-server/* $(BUILDDIR)/langdoc/kurento-repository-server
 	  cd $(BUILDDIR)/langdoc/kurento-repository-server && mvn clean package -DskipTests
-	  
+
 	  javadoc $(DOCLINT) -windowtitle "Kurento Repository Server Javadoc" \
 	    -d $(BUILDDIR)/html/langdoc/javadoc/server \
 	    -sourcepath $(BUILDDIR)/langdoc/kurento-repository-server/src/main/java/ \
 	    -subpackages org.kurento.repository
-	   
+
 	  # kurento-repository-client javadoc
 	  rm -rf $(BUILDDIR)/langdoc/kurento-repository-client
 	  mv $(BUILDDIR)/langdoc/kurento-java/kurento-repository/kurento-repository-client $(BUILDDIR)/langdoc/kurento-repository-client
 	  rsync -av --exclude 'target' $(BUILDDIR)/langdoc/kurento-repository-client/* $(BUILDDIR)/langdoc/kurento-repository-client
 	  cd $(BUILDDIR)/langdoc/kurento-repository-client && mvn clean package -DskipTests
-	  
+
 	  javadoc $(DOCLINT) -windowtitle "Kurento Repository Client Javadoc" \
 	    -d $(BUILDDIR)/html/langdoc/javadoc/client \
 	    -sourcepath $(BUILDDIR)/langdoc/kurento-repository-client/src/main/java/ \
@@ -228,7 +228,7 @@ dist: clean langdoc html epub latexpdf
 	@echo
 	cp $(BUILDDIR)/epub/KurentoRepository.epub $(BUILDDIR)/latex/KurentoRepository.pdf $(BUILDDIR)/html &&\
 	tar zcvf $(BUILDDIR)/dist/docs-kurento-repository-$(DOC_VERSION).tgz -C $(BUILDDIR)/html .
-	
+
 readthedocs: clean langdoc
 	find ./source -name "*.html" -exec sed -i -e "s@|DOC_VERSION|@$(DOC_VERSION)@" {} \;
 	find ./source -name "*.rst" -exec sed -i -e "s@|DOC_VERSION|@$(DOC_VERSION)@" {} \;
