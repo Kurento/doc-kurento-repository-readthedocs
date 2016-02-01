@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.kurento</groupId>
 		<artifactId>kurento-repository</artifactId>
-		<version>6.2.2-SNAPSHOT</version>
+		<version>6.3.1-SNAPSHOT</version>
 	</parent>
 
 	<artifactId>kurento-repository-client</artifactId>
@@ -61,8 +61,8 @@
 	</dependencies>
 
 	<build>
-        <resources>
-            <resource>
+		<resources>
+			<resource>
 				<directory>src/main/resources</directory>
 				<filtering>false</filtering>
 			</resource>
