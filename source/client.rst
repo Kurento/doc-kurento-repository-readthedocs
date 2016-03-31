@@ -31,7 +31,7 @@ with the repository server. The Maven artifact to be included in you pom.xml is
    <dependency>
        <groupId>org.kurento</groupId>
        <artifactId>kurento-repository-client</artifactId>
-       <version>6.1.1-SNAPSHOT</version>
+       <version>6.4.0</version>
    </dependency>
 
 We provide a Kurento Java tutorial, 
