@@ -2,24 +2,17 @@
    :alt:    Kurento logo
    :align:  center
 
-|
-|
-
-%%%%%%%%%%%%%%%%%
 Table of Contents
-%%%%%%%%%%%%%%%%%
+=================
 
 .. toctree::
    :maxdepth: 2
 
-   description.rst
-   code_structure.rst
-   server.rst
-   run_server.rst
-   apis_server.rst
-   client.rst
-   internal.rst
-   javadoc.rst
+   introduction.rst
+   repository_server.rst
+   repository_rest_api.rst
+   repository_client.rst
+   repository_javadoc.rst
    glossary.rst
 
 * :ref:`genindex`

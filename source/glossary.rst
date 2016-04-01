@@ -1,6 +1,5 @@
-%%%%%%%%
 Glossary
-%%%%%%%%
+========
 
 This is a glossary of terms that often appear in discussion about multimedia
 transmissions. Most of the terms are described and linked to its wikipedia, RFC
