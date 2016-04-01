@@ -18,7 +18,7 @@ and its factory ``org.kurento.repository.RepositoryClientProvider`` is quite
 detailed so it shouldn't be very difficult to set up a client connected to a
 running Kurento Repository Server (don't forget to check our tutorials, and
 especially the
-`kurento-hello-world-repository <https://github.com/Kurento/kurento-tutorial-java/tree/master/kurento-hello-world-recording>`_).
+`kurento-hello-world-repository <https://github.com/Kurento/kurento-tutorial-java/tree/master/kurento-hello-world-repository>`_).
 
 This library can be imported as a Maven dependency and then instances of
 ``org.kurento.repository.RepositoryClient`` can be created in order to interact
