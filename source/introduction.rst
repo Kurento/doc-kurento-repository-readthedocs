@@ -47,7 +47,7 @@ record and play media over HTTP using the capabilities of the
 Source code
 -----------
 
-Kurento Repository is open source (LGPL-2.1) and it is hosted on
+Kurento Repository is open source (Apache 2.0) and it is hosted on
 `GitHub <https://github.com/Kurento/kurento-java/tree/master/kurento-repository>`_.
 This Git repository contains a Maven project with the following modules:
 
