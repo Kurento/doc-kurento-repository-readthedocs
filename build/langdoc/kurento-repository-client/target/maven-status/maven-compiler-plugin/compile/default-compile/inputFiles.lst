@@ -1,7 +1,0 @@
-/opt/kurento/doc-kurento-repository/build/langdoc/kurento-repository-client/src/main/java/org/kurento/repository/RepositoryUrlLoader.java
-/opt/kurento/doc-kurento-repository/build/langdoc/kurento-repository-client/src/main/java/org/kurento/repository/RepositoryClient.java
-/opt/kurento/doc-kurento-repository/build/langdoc/kurento-repository-client/src/main/java/org/kurento/repository/service/pojo/RepositoryItemEndpoint.java
-/opt/kurento/doc-kurento-repository/build/langdoc/kurento-repository-client/src/main/java/org/kurento/repository/RepositoryUrlProvider.java
-/opt/kurento/doc-kurento-repository/build/langdoc/kurento-repository-client/src/main/java/org/kurento/repository/service/pojo/RepositoryItemRecorder.java
-/opt/kurento/doc-kurento-repository/build/langdoc/kurento-repository-client/src/main/java/org/kurento/repository/RepositoryClientProvider.java
-/opt/kurento/doc-kurento-repository/build/langdoc/kurento-repository-client/src/main/java/org/kurento/repository/service/pojo/RepositoryItemPlayer.java

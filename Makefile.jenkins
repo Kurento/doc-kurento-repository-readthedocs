@@ -132,6 +132,8 @@ langdoc:
 	    -sourcepath $(BUILDDIR)/langdoc/kurento-repository-client/src/main/java/ \
 	    -subpackages org.kurento.repository
 
+	  rm -rf $(BUILDDIR)/langdoc
+
 qthelp:
 	$(SPHINXBUILD) -b qthelp $(ALLSPHINXOPTS) $(BUILDDIR)/qthelp
 	@echo
